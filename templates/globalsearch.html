@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>全域POI检索</title>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <link rel="stylesheet" href="../static/layui/css/layui.css">
+    <style>
+        .button1 {
+            background-color: #FF336B;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 104px 2px;
+            cursor: pointer;
+            position: absolute;
+        }
+    </style>
+    <style>
+        .layui-btn-container {
+            position: absolute;
+        }
+    </style>
+    <script type='text/javascript' src="../static/js/jquery-3.2.0.js"></script>
+    <script type="text/javascript"
+            src="http://webapi.amap.com/maps?v=1.4.11&key=55a951888ad5e371ab9bdb22ff191cc9"></script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+    <script type="text/javascript" src="../static/layui/layui.js"></script>
+    <script type="text/javascript" src="../static/js/globalsearch.js"></script>
+
+</head>
+<body>
+<div id="container"></div>
+<button id="clearmap" class="button1">清除所有覆盖物</button>
+<div class="layui-btn-container">
+    <button class="layui-btn" id="field1" value="0">餐饮服务</button>
+    <button class="layui-btn" id="field2" value="1">商场</button>
+    <button class="layui-btn" id="field3" value="2">运动场馆</button>
+    <button class="layui-btn" id="field4" value="3">娱乐场所</button>
+    <button class="layui-btn" id="field5" value="4">影剧院</button>
+    <button class="layui-btn" id="field6" value="5">医疗保健服务</button>
+    <button class="layui-btn" id="field7" value="6">住宿服务</button>
+    <button class="layui-btn" id="field8" value="7">风景名胜</button>
+    <button class="layui-btn" id="field9" value="8">楼宇</button>
+    <button class="layui-btn" id="field10" value="9">产业园区</button>
+    <button class="layui-btn" id="field11" value="10">住宅区</button>
+    <button class="layui-btn" id="field12" value="11">政府机构及社会团体</button>
+    <button class="layui-btn" id="field13" value="12">学校</button>
+    <button class="layui-btn" id="field14" value="13">公交车站</button>
+    <button class="layui-btn" id="field15" value="14">停车场</button>
+    <button class="layui-btn" id="field16" value="15">银行</button>
+</div>
+</body>
+</html>

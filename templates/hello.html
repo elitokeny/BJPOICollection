@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<h1>车站列表</h1>
+<ul>
+    {%for station in stations%}
+        <li>
+            <a href="#">{{ station.name }}</a>
+        </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

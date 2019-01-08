@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>周边检索</title>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <link rel="stylesheet" href="../static/layui/css/layui.css">
+    <style>
+        .button1 {
+            background-color: #FF336B;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 0px 500px;
+            cursor: pointer;
+            position: absolute;
+        }
+    </style>
+    <script type='text/javascript' src="../static/js/jquery-3.2.0.js"></script>
+    <script type="text/javascript"
+            src="http://webapi.amap.com/maps?v=1.4.11&key=55a951888ad5e371ab9bdb22ff191cc9"></script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+    <script type="text/javascript" src="../static/js/searchNearby.js"></script>
+    <script type="text/javascript" src="../static/layui/layui.js"></script>
+</head>
+<body>
+<div id="container"></div>
+<form class="layui-form" action="">
+    <div class="layui-form-item">
+        <label class="layui-form-label">中心点经度</label>
+        <div class="layui-input-block" style="width:400px">
+            <input type="text" name="lng" required lay-verify="required|number"
+                   placeholder="请输入中心点经度值（例如：116.3952）"
+                   autocomplete="off"
+                   class="layui-input">
+        </div>
+    </div>
+
+        <div class="layui-form-item">
+        <label class="layui-form-label">中心点纬度</label>
+        <div class="layui-input-block" style="width:400px">
+            <input type="text" name="lat" required lay-verify="required"
+                   placeholder="请输入中心点纬度值（例如：39.2546）"
+                   autocomplete="off"
+                   class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">搜索半径</label>
+        <div class="layui-input-block" style="width:400px">
+            <input type="text" name="radius" required lay-verify="required|number" placeholder="请输入半径"
+                   autocomplete="off"
+                   class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">POI类型</label>
+        <div class="layui-input-block" style="width:400px">
+            <input type="text" name="poiType" required lay-verify="required" placeholder="请输入POI类型（例如：住宅区）"
+                   autocomplete="off"
+                   class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="searchnearby">立即提交</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </div>
+</form>
+<button id="getresult" class="button1">显示检索数据</button>
+<table id="searchresult" lay-filter="test"></table>
+</body>
+</html>

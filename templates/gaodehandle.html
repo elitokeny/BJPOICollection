@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>周边检索</title>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <style type="text/css">
+        #panel {
+            position: fixed;
+            background-color: white;
+            max-height: 90%;
+            overflow-y: auto;
+            top: 10px;
+            right: 10px;
+            width: 280px;
+            border-bottom: solid 1px silver;
+        }
+    </style>
+    <style>
+        .button1 {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            position: absolute;
+        }
+
+        .button2 {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 74px 2px;
+            cursor: pointer;
+            position: absolute;
+        }
+
+        .button3 {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 144px 2px;
+            cursor: pointer;
+            position: absolute;
+        }
+
+        .button4 {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 214px 2px;
+            cursor: pointer;
+            position: absolute;
+        }
+
+        .button5 {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 284px 2px;
+            cursor: pointer;
+            position: absolute;
+        }
+        .button6{
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 354px 2px;
+            cursor: pointer;
+            position: absolute;
+        }
+    </style>
+
+    <script type='text/javascript' src="static/js/jquery-3.2.0.js"></script>
+    <script type="text/javascript"
+            src="http://webapi.amap.com/maps?v=1.4.11&key=55a951888ad5e371ab9bdb22ff191cc9"></script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+    <script type="text/javascript" src="../static/js/gaodehandle.js"></script>
+</head>
+<body>
+<div id="container"></div>
+<div id="panel"></div>
+<button id="getStationLngLat" class="button1">抓取车站经纬度</button>
+<button id="getPoi" class="button2">搜索POI</button>
+<button id="getgateway" class="button3">搜索出入口</button>
+<button id="getAjk" class="button4">房产数据补全</button>
+<button id="getPOICount" class="button5">POI校核数量生成</button>
+<button id="getBusinfo" class="button6">公交数据抓取</button>
+</body>
+</html>

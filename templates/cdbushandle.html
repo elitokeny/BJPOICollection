@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>公交线路查询</title>
+    <link rel="stylesheet" href="https://cache.amap.com/lbs/static/main1119.css"/>
+    <style>
+        .button1 {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            position: absolute;
+        }
+    </style>
+    <script type="text/javascript"
+            src="https://webapi.amap.com/maps?v=1.4.11&key=d6ec9db4260551eb2235121120e32c87&plugin=AMap.LineSearch"></script>
+    <script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>
+    <script type='text/javascript' src="static/js/jquery-3.2.0.js"></script>
+    <script type="text/javascript" src="static/js/cdbushandle.js"></script>
+</head>
+<body>
+<div id="container"></div>
+<button id="getBusinfo" class="button1">公交数据抓取</button>
+</body>
+</html>

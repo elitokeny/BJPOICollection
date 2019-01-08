@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>事件系统</title>
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css" />
+
+    <style>
+        html,
+        body,
+        #container {
+          width: 100%;
+          height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="container"></div>
+<div class="info" id="text" style="left: 490px; top: 10px;">
+    请用鼠标在地图上操作试试
+</div>
+<div class="input-card" style="width:16rem; left: 10px; top: 490px;">
+    <h4>地图点击相关事件</h4>
+    <div>
+      <div class="input-item" >
+        <button id="clickOn" class="btn" style="margin-right:1rem;">绑定事件</button>
+        <button id="clickOff" class="btn">解绑事件</button>
+      </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.12&key=5d332b014aea2a962f04c1a12e087903"></script>
+<script src="https://a.amap.com/jsapi_demos/static/demo-center/js/demoutils.js"></script>
+<script type="text/javascript">
+    //初始化地图对象，加载地图
+    var map = new AMap.Map("container", {
+        resizeEnable: true, //是否监控地图容器尺寸变化
+        zoom:11, //初始化地图层级
+        center: [116.397428, 39.90923] //初始化地图中心点
+    });
+
+
+
+    function showInfoClick(e){
+        var text = '您在 [ '+e.lnglat.getLng()+','+e.lnglat.getLat()+' ] 的位置单击了地图！'
+        document.querySelector("#text").innerText = text;
+    }
+    function showInfoDbClick(e){
+        var text = '您在 [ '+e.lnglat.getLng()+','+e.lnglat.getLat()+' ] 的位置双击了地图！'
+        document.querySelector("#text").innerText = text;
+    }
+
+    // 事件绑定
+    function clickOn(){
+        log.success("绑定事件!");
+        map.on('click', showInfoClick);
+        map.on('dblclick', showInfoDbClick);
+    }
+    // 解绑事件
+    function clickOff(){
+        log.success("解除事件绑定!");
+        map.off('click', showInfoClick);
+        map.off('dblclick', showInfoDbClick);
+    }
+
+    // 给按钮绑定事件
+    document.getElementById("clickOn").onclick = clickOn;
+    document.getElementById("clickOff").onclick = clickOff;
+
+</script>
+</body>
+</html>

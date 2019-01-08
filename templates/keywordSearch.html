@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>关键字检索</title>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <link rel="stylesheet" href="../static/layui/css/layui.css" media="all">
+    <style>
+        .button1 {
+            background-color: #FF336B;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 0px 500px;
+            cursor: pointer;
+            position: absolute;
+        }
+    </style>
+
+    <script type='text/javascript' src="../static/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript"
+            src="http://webapi.amap.com/maps?v=1.4.11&key=5d332b014aea2a962f04c1a12e087903"></script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+    <script type="text/javascript" src="../static/layui/layui.js"></script>
+    <script type="text/javascript" src="../static/js/keywordSearch.js"></script>
+</head>
+<body>
+<div id="container"></div>
+<form class="layui-form" action="">
+    <div class="layui-form-item">
+        <label class="layui-form-label">关键字</label>
+        <div class="layui-input-block" style="width:400px">
+            <input type="text" name="keyword" required lay-verify="required" placeholder="请输入关键字（如地铁站）"
+                   autocomplete="off"
+                   class="layui-input">
+        </div>
+
+        <label class="layui-form-label">POI类型</label>
+        <div class="layui-input-block" style="width:400px">
+            <input type="text" name="poiType" placeholder="请输入POI类型（选填，若不填则提供所有类型）" autocomplete="off"
+                   class="layui-input">
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </div>
+</form>
+<button id="getresult" class="button1">显示检索数据</button>
+<table id="searchresult" lay-filter="test"></table>
+</body>
+</html>
